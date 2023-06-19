@@ -1,11 +1,25 @@
-import './App.css'
+import './index.css'
+import Navbar from './homePageComponents/Navbar/Navbar'
+import { useState } from 'react'
+
+enum SelectedPage {
+  Home = 'home',
+  Features = 'features',
+  Pricing = 'pricing',
+  Contact = 'contact'
+}
 
 function App() {
 
+  const [selectedPage, setSelectedPage] = useState<SelectedPage>(SelectedPage.Home)
+
   return (
-   <div>
-    <h1 className='underline'>Hello World</h1>
-   </div>
+    <>
+      <Navbar
+        selectedPage={selectedPage}
+        setSelectedPage={setSelectedPage}
+      />
+    </>
   )
 }
 
