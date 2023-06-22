@@ -1,13 +1,7 @@
 import './index.css'
 import Navbar from './homePageComponents/Navbar/Navbar'
 import { useState } from 'react'
-
-enum SelectedPage {
-  Home = 'home',
-  Features = 'features',
-  Pricing = 'pricing',
-  Contact = 'contact'
-}
+import { SelectedPage } from './homePageComponents/Shared/types'
 
 function App() {
 

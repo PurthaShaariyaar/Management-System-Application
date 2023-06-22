@@ -7,15 +7,15 @@ interface LinkProps {
   setSelectedPage: (value: SelectedPage) => void;
 }
 
-const Link = ({ page, selectedPage, setSelectedPage }: LinkProps) => {
+const MenuLink = ({ page, selectedPage, setSelectedPage }: LinkProps) => {
 
   const lowerCasePage = page.toLowerCase().replace(/ /g, "") as SelectedPage;
   const handleClick = () => setSelectedPage(lowerCasePage);
 
   return (
     <AnchorLink
-      className={`${selectedPage === lowerCasePage ? "text-primary-500" : ""}
-        transition duration-400 hover:text-sky-600
+      className={`${selectedPage === lowerCasePage ? "" : ""}
+        transition duration-400 text-white hover:text-black
       `}
       href={`#${lowerCasePage}`}
       onClick={handleClick}
@@ -25,4 +25,4 @@ const Link = ({ page, selectedPage, setSelectedPage }: LinkProps) => {
   )
 }
 
-export default Link;
+export default MenuLink;
